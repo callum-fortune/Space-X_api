@@ -1,0 +1,16 @@
+* {
+
+}
+
+.main-content-ctr {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 'top-left top-center top-right'
+    'bottom-left bottom-left bottom-right';
+}
+
+.section-component {
+
+}
