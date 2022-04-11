@@ -66,7 +66,7 @@ function Main(){
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>Crew</td>
+                                        <td>Crew members</td>
                                         <td>{responseData.crew}</td>
                                     </tr>
                                     <tr>
