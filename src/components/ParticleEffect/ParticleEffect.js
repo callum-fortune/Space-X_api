@@ -80,7 +80,7 @@ function ParticleEffect (){
                         number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 2000,
               },
               value: 80,
                         },

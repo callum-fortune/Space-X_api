@@ -101,9 +101,88 @@
     font-weight: bold;
 }
 
+.info-unit>.stats-ctr>table>tbody>tr {
+    background-color: rgb(167 196 211 / 30%);
+    margin: 5px;    
+}
+
+.info-unit>.stats-ctr>table>tbody>tr>td {
+    padding: 10px;    
+}
+
+.info-unit>.stats-ctr>table>tbody>tr>td:last-child {
+    padding: 5px; 
+    text-align: center;   
+}
+
 .info-unit>.stats-ctr>h1 {
     margin-bottom: 20px;
 }
+
+.info-unit>.stats-ctr>h1 {
+    margin-bottom: 20px;
+}
+
+.reddit {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.reddit::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(167 196 211 / 30%);
+    border-radius: 50% 10% 0 0;
+}
+
+.reddit>div {
+    z-index:1;
+}
+
+.reddit>div>h1{
+    text-align: center;
+}
+
+.reddit>div>div>h2 {
+    text-transform: capitalize;
+}
+
+.reddit>div>div>a {
+    text-decoration: none;
+    color: inherit;
+    margin:20px;
+}
+
+.reddit>div>div>a>h3 {
+    padding: 10px 20px;
+    background-color: #BA1200;
+    border-radius: 5px;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.reddit>div>h1 {
+    width: 100%;
+    margin: 0 0 0 auto;
+}
+
+
+.reddit-icon {
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    margin-left: auto;
+    text-align: right;
+    justify-self: flex-end;
+}
+
 
 @media screen and (max-width: 700px){
 

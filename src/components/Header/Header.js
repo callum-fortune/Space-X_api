@@ -6,6 +6,7 @@ function Header(){
     var daysSinceLaunch = 0;
     const [daysSince, setDaysSince] = useState();
     const [wikiUrl, setWikiUrl] = useState();
+    const [missionName, setMissionName] = useState();
     var responseData;
 
     var req = new XMLHttpRequest();
@@ -18,6 +19,8 @@ function Header(){
       responseData = JSON.parse(req.responseText)
       var wikiUrl = responseData['links']['wikipedia'];
       setWikiUrl(wikiUrl);
+      var missionName = responseData['name'];
+      setMissionName(missionName);
       var days = Math.floor(Date.now()/1000)  - parseInt(responseData['date_unix']);
       daysSinceLaunch = Math.floor(days/60/60/24);
       setDaysSince(daysSinceLaunch == 1 ? `Launched ${daysSinceLaunch} day ago` : `Launched ${daysSinceLaunch} days ago`);
@@ -27,7 +30,7 @@ function Header(){
 
     return (
         <header>
-            <h1>SpaceX <font style={{fontSize: '0.6em', color: '#508AA8'}}>Latest launch</font></h1>
+            <h1>SpaceX <font style={{fontSize: '0.6em', color: '#508AA8'}}>Latest launch: {missionName}</font></h1>
             <ul>
                 <li>{daysSince}</li>
                 <a className='wiki-link' href={wikiUrl}>
