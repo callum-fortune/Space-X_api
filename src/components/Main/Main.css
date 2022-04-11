@@ -4,13 +4,139 @@
 
 .main-content-ctr {
     width: 100vw;
-    height: auto;
-    display: grid;
-    gap: 20px;
-    grid-template-areas: 'top-left top-center top-right'
-    'bottom-left bottom-left bottom-right';
+    height: 100vh;
 }
 
-.section-component {
+.main-content {
+    min-height: 100%;
+    height: fit-content;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.info-unit {
+    background-color: white;
+    padding: 20px;
+    width: 60vw;
+    margin-top: 50px;
+    position: relative;
+}
+
+
+.info-unit:nth-child(even) {
+    align-self: flex-end;
+}
+
+.info-unit:nth-child(even)::after {
+    content: '';
+    width: 5px;
+    height: 100px;
+    background-color: #FFF;
+    position: absolute;
+    left: 50px;
+    bottom: -75px;
+    z-index:-10
+}
+
+.info-unit:nth-child(odd)::after {
+    content: '';
+    width: 5px;
+    height: 100px;
+    background-color: #FFF;
+    position: absolute;
+    right: 50px;
+    bottom: -75px;
+    z-index:-10
+}
+
+.info-unit:last-child::after {
+    width: 0;
+    height: 0;
+}
+
+.info-unit.mission-info {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.info-unit.mission-info>.inner-ctr {
+    z-index: 1;
+    display: flex;
+}
+
+.info-unit.mission-info>.inner-ctr>div.img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-unit.mission-info>.inner-ctr>div.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-unit.mission-info::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(167 196 211 / 30%);
+    border-radius: 50% 10% 0 0;
+}
+
+.info-unit>.stats-ctr {
+    
+}
+
+.info-unit>.stats-ctr>table {
+    width: 100%;
+    color: #BA1200;
+    font-weight: bold;
+}
+
+.info-unit>.stats-ctr>h1 {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px){
+
+    .info-unit {
+        width: 100%;
+    }
+
+    .info-unit.mission-info>.inner-ctr {
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .info-unit.mission-info>.inner-ctr>.img-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .info-unit.mission-info>.inner-ctr>.img-wrapper>img {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+
+    .main-content {
+        min-height: 100%;
+        height: fit-content;
+        padding: 100px 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 
 }

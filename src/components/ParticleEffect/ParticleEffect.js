@@ -25,7 +25,7 @@ function ParticleEffect (){
               value: "#031927",
                         },
                       },
-                      fpsLimit: 120,
+                      fpsLimit: 30,
                       interactivity: {
                         events: {
               onClick: {
@@ -74,7 +74,7 @@ function ParticleEffect (){
               enable: true,
               outMode: "bounce",
               random: false,
-              speed: 2,
+              speed: 0.5,
               straight: false,
                         },
                         number: {
